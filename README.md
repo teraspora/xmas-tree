@@ -2,7 +2,7 @@
 
 _Name: **John Lynch**_
 
-_Challenge Details:_https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/vie
+_Challenge Details:_  https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/view
 
 ## Task
 
