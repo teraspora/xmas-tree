@@ -34,7 +34,7 @@ Write a function to print the following Christmas Tree to the console.
 
 ## Implementation
 
-As a lover of patterns, and someone who can get a great thrill out of representing a pattern as a mathematical structure or an algorithm, I decided to find the patterns in the distributions of spaces in the image.
+As a lover of patterns, and someone who can get a great thrill out of representing a pattern as a mathematical structure or an algorithm, I decided to find the patterns in the distributions of spaces in the image.   I also decided to use Python for the job, merely because I am hoping to get a Python job, so am temporarily eschewing other languages.   In particular I am using Python 3.8, but any Python 3 version should run this little print statement fine, certainly <= 3.7.
 
 First, I divided the image into three sections, to be considered separately: 
 1. The top line, containing the tree fairy `|`.
