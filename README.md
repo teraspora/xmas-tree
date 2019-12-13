@@ -3,7 +3,7 @@
 _Name: **John Lynch**_
 
 _Challenge Details:_
-[Link to Challenge](https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/view)
+(https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/view)
 
 ## Task
 
@@ -44,16 +44,11 @@ First, I divided the image into three sections, to be considered separately:
 
 ### Let's deal with the central section first:
 
-We have two classes of whitespace strings:  leading spaces (before the first `/`) and central spaces (between '/` and `\\`)
+We have two classes of whitespace strings:  leading spaces (before the first `/`) and central spaces (between `/` and `\\`)
 
 First, list the numbers of central spaces:
        Central spaces:
-         1,  3,  5
-         5,  7,  9
-         9, 11, 13
-        13, 15, 17
-        17, 19, 21,
-        21, 23, 25
+         1,  3,  5, 5,  7,  9,  9, 11, 13, 13, 15, 17, 17, 19, 21, 21, 23, 25
         
 We can represent this by using `range()`:
 `[range(i, i + 5, 2) for i in range(1, 22, 4)]` gives
@@ -79,7 +74,7 @@ Note that in this case we have to reverse the ranges, because the count of leadi
 
 ### Putting it together to create art!
 
-Let's analyse what we need.   We can simplify things a bit by ignoring the underscore `_` characters on every third line.   Let's just try to build the outer canopy of the tree, which contains only spaces, slashes `/`, backslashes `\\` and carriage returns `\\n`.
+Let's analyse what we need.   We can simplify things a bit by ignoring the underscore `_` characters on every third line.   Let's just try to build the outer canopy of the tree, which contains only spaces, slashes `/`, backslashes `\` and carriage returns `\n`.
 
 Notice the structure for each line is:
 
@@ -230,12 +225,12 @@ Now, if we substitute in the list comprehensions we made for our lists of spaces
 >>>
 ```
 
-Now let's thik aboutyout those extra underscore characters.   We notice they occur on every third line, in fact on lines 2, 5, 8, 11 and 14. We can create a `range()` object for this set: `range(2, 15, 3)`.
+Now let's think about those extra underscore characters.   We notice they occur on every third line, in fact on lines 2, 5, 8, 11 and 14. We can create a `range()` object for this set: `range(2, 15, 3)`.
 
-We can see that whenever we're on one of these lines, a `/` should become `/_`, the central space count should decrease by two, and `\\` should become `_\\`.
+We can see that whenever we're on one of these lines, a `/` should become `/_`, the central space count should decrease by two, and `\` should become `_\`.
 
 So '/' becomes `{'/_' if i in range(2, 15, 3) else '/'}`, and 
-`\\` becomes `{'_\\' if i in range(2, 15, 3) else '\\'}`.
+`\` becomes `{'_\\' if i in range(2, 15, 3) else '\\'}`.
 
 For the spaces, let's add in two fewer spaces in the first place, then just add two more spaces if we're not on one of these special lines:
 
@@ -296,6 +291,8 @@ Why?   Because we're trying to print `-1` spaces.   It would be nice if this act
 
 >>>
 ```
+### Hey presto!
+
 ## Season's greetings to you all and happy coding!
 
 
