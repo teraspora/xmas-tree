@@ -228,7 +228,7 @@ Now let's think about those extra underscore characters.   We notice they occur 
 
 We can see that whenever we're on one of these lines, a `/` should become `/_`, the central space count should decrease by two, and `\` should become `_\`.
 
-So '/' becomes `{'/_' if i in range(2, 15, 3) else '/'}`, and 
+So `/` becomes `{'/_' if i in range(2, 15, 3) else '/'}`, and 
 `\` becomes `{'_\\' if i in range(2, 15, 3) else '\\'}`.
 
 For the spaces, let's add in two fewer spaces in the first place, then just add two more spaces if we're not on one of these special lines:
@@ -291,6 +291,43 @@ Why?   Because we're trying to print `-1` spaces.   It would be nice if this act
 >>>
 ```
 ### Hey presto!
+
+Finally, we can change the single quotes for our main f-string into triple quotes, so that we can break the statement over a few lines:
+
+```
+Python 3.8.0 (default, Oct 28 2019, 16:14:01) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print(" " * 20 + '|\n' + ''.join([
+...       f"""{" " * [n for t in [range(i, i + 3)[::-1] for i in range(7, 18, 2)[::-1]]
+...       for n in t][i]}{"/_" if i in range(2, 15, 3) else "/"}{" " * ([n for t in [range(i, i + 5, 2)
+...       for i in range(1, 22, 4)] for n in t][i] - 2) + (" " if not i else "" if i in range(2, 15, 3)
+...       else "  ")}{"_" + chr(92) if i in range(2, 15, 3) else chr(92)}\n"""
+...       for i in range(18)]) + f'{" " * 6}|{"_" * 27}|\n{" " * 17}\\{"_" * 7}/\n')
+                    |
+                   / \
+                  /   \
+                 /_   _\
+                 /     \
+                /       \
+               /_       _\
+               /         \
+              /           \
+             /_           _\
+             /             \
+            /               \
+           /_               _\
+           /                 \
+          /                   \
+         /_                   _\
+         /                     \
+        /                       \
+       /                         \
+      |___________________________|
+                 \_______/
+
+>>>
+```
 
 ## Season's greetings to you all and happy coding!
 
