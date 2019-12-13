@@ -2,8 +2,7 @@
 
 _Name: **John Lynch**_
 
-_Challenge Details:_
-(https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/view)
+_Challenge Details:_https://drive.google.com/file/d/1NkaNnGjKdxp1fvp6m9aCT2D-Rc3XKdD-/vie
 
 ## Task
 
@@ -44,7 +43,7 @@ First, I divided the image into three sections, to be considered separately:
 
 ### Let's deal with the central section first:
 
-We have two classes of whitespace strings:  leading spaces (before the first `/`) and central spaces (between `/` and `\\`)
+We have two classes of whitespace strings:  leading spaces (before the first `/`) and central spaces (between `/` and `\`)
 
 First, list the numbers of central spaces:
        Central spaces:
@@ -96,7 +95,7 @@ Now we can construct a call to the `print() function`:
 In pseudo-code:
 
 For each line `i` from `0` to `17`:
-    print `ls[i]` spaces + `/` + `cs[i]` spaces + `\\` + return.
+    print `ls[i]` spaces + `/` + `cs[i]` spaces + `\` + return.
 
 So, in Python, we can make a list comprehension as the line index goes from 0 to 17, and then join all the lines we get:
 
